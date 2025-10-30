@@ -1,6 +1,17 @@
+import {songs} from "./musicLibrary.js";
+
 const player = document.querySelector('.player')
 const textContainer = document.querySelector('.textContainer')
 const lyric = document.querySelector('#lyric')
+const tracks = document.querySelector('#tracks')
+
+songs.forEach((song)=>{
+    const track = document.createElement("div")
+    const title = document.createElement("span")
+    title.textContent = song.songTitle
+    tracks.appendChild(title)
+    tracks.appendChild(track)
+})
 
 const syncData =[
     {
